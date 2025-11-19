@@ -1,7 +1,9 @@
 #header {
     display: flex;
+    flex-direction: row;
     background-color: orange;
     justify-content: space-between;
+    border: 1px solid orange;
 }
 
 #pages {
