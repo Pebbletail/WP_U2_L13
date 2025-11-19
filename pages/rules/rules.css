@@ -1,0 +1,18 @@
+#header {
+    display: flex;
+    background-color: orange;
+    justify-content: space-between;
+}
+
+#pages {
+    display: flex;
+    flex-direction: row;
+}
+
+.pageswitch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid orange;
+    background-color: yellow;
+}
