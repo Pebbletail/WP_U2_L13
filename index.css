@@ -1,0 +1,36 @@
+body {
+  background-color: wheat;
+}
+
+#allCards, #allCards div {
+  display: flex;
+}
+
+#allCards {
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  width: 90vw;
+  height: 90vh;
+
+  border: 2px solid black;
+}
+
+.row {
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  width: 100%;
+  height: 15%;
+}
+
+.cardDiv {
+  border: 1px dotted wheat;
+  width: 13vh;
+  height: 13vh;
+}
+
+.cardImg {
+  object-fit: cover;
+}
+
