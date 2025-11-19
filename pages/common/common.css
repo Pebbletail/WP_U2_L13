@@ -1,0 +1,16 @@
+
+.public-sans-website-font {
+  font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+
+p, a {
+    font-size: 3vh;
+    font-family: "Public Sans", website-font;
+}
+
+body {
+    background-color: #FFA866;
+}
