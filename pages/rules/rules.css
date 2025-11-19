@@ -1,9 +1,17 @@
+.jersey-10-regular {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 #header {
     display: flex;
     flex-direction: row;
     background-color: orange;
+    align-items: center;
     justify-content: space-between;
-    border: 1px solid orange;
+    border: 0.5vh solid #FFC567;
+    /*border-bottom-color: orange;*/
 }
 
 #pages {
@@ -15,6 +23,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 3px solid orange;
+    border: 0.3vh solid #FFC567;
+    border-radius: 1.5vh;
     background-color: yellow;
+    font-size: 3vh;
+    width: 5vw;
+}
+
+#title {
+    margin-top: 0vh;
+    margin-bottom: 0vh;
+}
+
+.description {
+    margin-top: 0vh;
+    margin-bottom: 1vh;
+    margin-left: 3vh;
+}
+
+#content {
+    height: 92vh;
+    border: 0.5vh solid #FFC567;
+    background-color: orange;
+}
+
+.pageswitch:hover {
+    background-color: #CEC637;    
 }
