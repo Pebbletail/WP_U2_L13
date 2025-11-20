@@ -30,7 +30,7 @@ body {
   height: 13vh;
 }
 
-.cardImg {
+.cardDiv img {
   object-fit: cover;
 }
 
