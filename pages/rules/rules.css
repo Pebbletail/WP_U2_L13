@@ -28,10 +28,6 @@
     margin-right: 5vw;
 }
 
-.pageswitch:hover {
-    background-color: #CEC637;    
-}
-
 .matches {
     display: flex;
     flex-direction: row;

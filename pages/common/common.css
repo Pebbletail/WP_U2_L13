@@ -32,6 +32,10 @@
     flex-direction: row;
 }
 
+.pageswitch:hover {
+    background-color: #CEC637;    
+}
+
 #title {
     margin-top: 0vh;
     border: 0.3vh solid #FFC567;
