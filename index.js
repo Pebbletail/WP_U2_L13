@@ -1,16 +1,23 @@
-function create_board(layout) {
+function create_board() {
   const container = document.getElementById("allCards");
   let num=0;
+  const cardList = initialize_cards();
+  const layout = shuffle(cardList);
+
   for (let r=0; r<4; r++) {
     const row = container.children[r];
     for (let c=0; c<5; c++) {
       const cell = row.children[c];
 
       const card = document.createElement("img");
-      card.src = layout[num];
-      console.log(layout[num]);
+      /*console.log(layout[num]);*/
+      card.src = "resources/common/CardBack.png";
       card.alt = `Card Number ${num}`;
-      card.className = "cardImg";
+
+      card.id = layout[num];
+
+      card.onclick = function(){clicked_card(card)};
+
       cell.appendChild(card);
 
       num++;
@@ -18,32 +25,43 @@ function create_board(layout) {
   }
 }
 
-function store_inital_pos(list) {
-  sessionStorage.setItem("cardLayout", `${list}`);
+function clicked_card(card) {
+  const picNum = show_card(card);
+
+}
+
+
+function show_card(card) {
+  let picNum = (card.id);
+  picNum = picNum.at(0);
+  card.src = `resources/common/Leaf${picNum}.png`;
+  return picNum;
 }
 
 function initialize_cards() {
-  const list = [];
+  let list = [];
   for (let i=0; i<10; i++) {
-    const currCard = `resources/common/Leaf${i}.png`;
-    const matchCard = `resources/common/Leaf${i}.png`;
+    for (let n=0; n<2; n++) {
+      const card = `${i} ${n}`;
 
-    list.push(currCard, matchCard);
+      list.push(card);
+    }
   }
   return list;
 }
 
 function shuffle(list) {
   let shuffled = [];
-  for (let i=0; i<list.length; i++) {
-    el = list.pop();
-    shuffled.push(el);
+  while (shuffled.length < list.length) {
+    const rand = randint(0, list.length);
+    const el = list[rand];
+    if (el != undefined) {
+      console.log(el)
+      delete list[rand];
+      shuffled.push(el);
+    }
   }
   return shuffled;
-}
-
-function choice(list) {
-  return list.randint(0, list.length-1);
 }
 
 function randint(min, max) {
@@ -54,14 +72,7 @@ function randint(min, max) {
 
 
 function main() {
-  if (!sessionStorage.getItem("cardLayout")) {
-    c = initialize_cards();
-    shufc = shuffle(c);
-    console.log(`AAA${shufc}`);
-    store_inital_pos(shufc);
-  }
-  layout = sessionStorage.getItem("cardLayout").split(",");
-  create_board(layout);
+    create_board();
 }
 
 main();
