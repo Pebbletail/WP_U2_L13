@@ -6,6 +6,44 @@
   font-style: normal;
 }
 
+#header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-image: url(../../resources/rules/leafbg.jpg);
+    background-size: 20vh;
+    justify-content: space-between;
+    border: 0.5vh solid #FFC567;
+}
+
+.pageswitch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.3vh solid #FFC567;
+    border-radius: 1.5vh;
+    background-color: rgba(255, 255, 0, 0.7);
+    font-size: 3vh;
+    width: 5vw;
+}
+
+#pages {
+    display: flex;
+    flex-direction: row;
+}
+
+.pageswitch:hover {
+    background-color: #CEC637;    
+}
+
+#title {
+    margin-top: 0vh;
+    border: 0.3vh solid #FFC567;
+    background-color: rgba(255, 255, 0, 0.7);
+    border-radius: 1.5vh;
+    margin-bottom: 0vh;
+}
+
 p, a {
     font-size: 3vh;
     font-family: "Public Sans", website-font;
