@@ -1,52 +1,38 @@
-.jersey-10-regular {
-  font-family: "Jersey 10", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-#header {
-    display: flex;
-    flex-direction: row;
-    background-color: orange;
-    align-items: center;
-    justify-content: space-between;
-    border: 0.5vh solid #FFC567;
-    /*border-bottom-color: orange;*/
-}
-
-#pages {
-    display: flex;
-    flex-direction: row;
-}
-
-.pageswitch {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 0.3vh solid #FFC567;
-    border-radius: 1.5vh;
-    background-color: yellow;
-    font-size: 3vh;
-    width: 5vw;
-}
-
-#title {
-    margin-top: 0vh;
-    margin-bottom: 0vh;
-}
-
 .description {
     margin-top: 0vh;
     margin-bottom: 1vh;
     margin-left: 3vh;
 }
 
-#content {
-    height: 92vh;
-    border: 0.5vh solid #FFC567;
-    background-color: orange;
+.bulletpoint {
+    margin-top: 0vh;
+    margin-bottom: 5vh;
+    font-size: 2vh;
+    margin-left: 5vh;
+}
+
+#last {
+    margin-bottom: 1vh;
+}
+
+.default {
+    height: 15vh;
+}
+
+#spacer1 {
+    height: 5vh;
+}
+
+.spacer2 {
+    margin-bottom: 3vh;
+    margin-right: 5vw;
 }
 
 .pageswitch:hover {
     background-color: #CEC637;    
+}
+
+.matches {
+    display: flex;
+    flex-direction: row;
 }
