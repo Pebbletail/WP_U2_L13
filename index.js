@@ -1,6 +1,9 @@
 let clicked = [];
 let totalMatches = 0;
 let playerTurn = 0;
+let player1Score = 0;
+let player2Score = 0;
+
 
 function initialize_cards() {
   let list = [];
@@ -61,7 +64,7 @@ function create_board() {
 
 
 function clicked_card(card) {
-  const picNum = show_card(card);
+  show_card(card);
   clicked.push(card);
   console.log(clicked);
 
@@ -69,10 +72,13 @@ function clicked_card(card) {
     if (clicked[0].className == clicked[1].className) {
       console.log("Match!");
       totalMatches++;
+
+      add_score();
       clear_clicked();
       flip_player();
+
       console.log(totalMatches);
-      if (totalMatches == 4) {
+      if (totalMatches == 10) {
         end_game();
       }
     }
@@ -82,10 +88,9 @@ function clicked_card(card) {
 
       setTimeout(hide_chosen, 1000);
       setTimeout(clear_clicked, 1000);
-      setTimeout(unblock_screen, 1000);
       setTimeout(flip_player, 1000);
+      setTimeout(unblock_clicks, 1000);
     }
-    console.log("2 cards clicked");
   }
 }
 
@@ -117,8 +122,7 @@ function show_card(card) {
   let picNum = (card.id);
   picNum = picNum.at(0);
   card.src = `resources/common/Leaf${picNum}.png`;
-  /*block_click*/
-  return picNum;
+  block_card(card);
 }
 
 function hide_chosen() {
@@ -129,31 +133,30 @@ function hide_chosen() {
 }
 
 function hide_card(card) {
-  console.log(`>>>>> ${card.id} hidden`);
   card.src = "resources/common/CardBack.png";
-  /*unblock_click*/
+  unblock_clicks()
 }
 
-function block_click(card) {
-  return 0;
-  /* create Invisible div over card so card is unclickable until another card is clicked*/
-}
-
-function unblock_click(card) {
-  return 0;
-  /* remove Block div*/
+function block_card(card) {
+  const toBlock = document.getElementById(card.id).parentElement;
+  const blocker = document.createElement("div");
+  blocker.className = "blockDiv";
+  toBlock.appendChild(blocker);
 }
 
 function block_screen() {
-  console.log("screen blocked");
-  return 0;
-  /*creates invisible div over entire screen*/
+  const toBlock = document.getElementById("allCards");
+  const blocker = document.createElement("div");
+  blocker.className = "blockDiv";
+  toBlock.appendChild(blocker);
 }
 
-function unblock_screen() {
-  console.log("screen unblocked");
-  return 0;
-  /*removes invisible div over entire screen*/
+function unblock_clicks() {
+  const toRemove = document.getElementsByClassName("blockDiv");
+
+  for (let i=0; i<toRemove.length; i++) {
+    toRemove[i].remove();
+  }
 }
 
 function clear_clicked() {
@@ -163,6 +166,15 @@ function clear_clicked() {
   console.log(clicked);
 }
 
+
+function add_score() {
+  if (playerTurn==0) {
+    player1Score++; }
+  else {
+    player2Score++;
+  }
+  }
+
 function flip_player() {
   playerTurn = Number(!Boolean(playerTurn));
   console.log(playerTurn++);
@@ -170,10 +182,8 @@ function flip_player() {
 
 
 
-
 function main() {
     create_board();
-    let playerTurn = 1;
 }
 
 main();

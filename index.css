@@ -23,11 +23,22 @@
 .cardDiv {
   display: flex;
   justify-content: center;
-  width: 13vh;
-  height: 13vh;
+  width: 10vh;
+  height: 12vh;
 }
 
 .cardDiv img {
-  object-fit: cover;
+  object-fit: contain;
 }
+
+.blockDiv {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: blue;
+  
+  opacity: 0.7;
+}
+
+
 
