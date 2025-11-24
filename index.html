@@ -8,6 +8,9 @@
     <title> Memory Match </title>
     <link rel="stylesheet" href="pages/common/common.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </header>
 
   <body>
@@ -22,58 +25,58 @@
         </div>
       </div>
     </div>
+    <div id="content">
+      <div id="allCards">
 
-    <div id="allCards">
+        <div class="row">
+          <div id="R0C0" class="cardDiv"> </div>
+          <div id="R0C1" class="cardDiv"> </div>
+          <div id="R0C2" class="cardDiv"> </div>
+          <div id="R0C3" class="cardDiv"> </div>
+          <div id="R0C4" class="cardDiv"> </div>
+        </div>
 
-      <div class="row">
-        <div id="R0C0" class="cardDiv"> </div>
-        <div id="R0C1" class="cardDiv"> </div>
-        <div id="R0C2" class="cardDiv"> </div>
-        <div id="R0C3" class="cardDiv"> </div>
-        <div id="R0C4" class="cardDiv"> </div>
+        <div class="row">
+          <div id="R1C0" class="cardDiv"> </div>
+          <div id="R1C1" class="cardDiv"> </div>
+          <div id="R1C2" class="cardDiv"> </div>
+          <div id="R1C3" class="cardDiv"> </div>
+          <div id="R1C4" class="cardDiv"> </div>
+        </div>
+
+        <div class="row">
+          <div id="R2C0" class="cardDiv"> </div>
+          <div id="R2C1" class="cardDiv"> </div>
+          <div id="R2C2" class="cardDiv"> </div>
+          <div id="R2C3" class="cardDiv"> </div>
+          <div id="R2C4" class="cardDiv"> </div>
+        </div>
+
+        <div class="row">
+          <div id="R3C0" class="cardDiv"> </div>
+          <div id="R3C1" class="cardDiv"> </div>
+          <div id="R3C2" class="cardDiv"> </div>
+          <div id="R3C3" class="cardDiv"> </div>
+          <div id="R3C4" class="cardDiv"> </div>
+        </div>
+
       </div>
 
-      <div class="row">
-        <div id="R1C0" class="cardDiv"> </div>
-        <div id="R1C1" class="cardDiv"> </div>
-        <div id="R1C2" class="cardDiv"> </div>
-        <div id="R1C3" class="cardDiv"> </div>
-        <div id="R1C4" class="cardDiv"> </div>
-      </div>
+      <div id="otherGameContent">
+        <h2 id="turnDisplay">Player 1's turn</h2>
+        <div id="pointTracker">
+          <h5>Player 1 points: 0</h5>
+          <h5>Player 2 points: 0</h5>
+        </div>
 
-      <div class="row">
-        <div id="R2C0" class="cardDiv"> </div>
-        <div id="R2C1" class="cardDiv"> </div>
-        <div id="R2C2" class="cardDiv"> </div>
-        <div id="R2C3" class="cardDiv"> </div>
-        <div id="R2C4" class="cardDiv"> </div>
-      </div>
+        <div id="winTracker">
+          <h5>Player 1 wins: 0</h5>
+          <h5>Player 2 wins: 0</h5>
+        </div>
 
-      <div class="row">
-        <div id="R3C0" class="cardDiv"> </div>
-        <div id="R3C1" class="cardDiv"> </div>
-        <div id="R3C2" class="cardDiv"> </div>
-        <div id="R3C3" class="cardDiv"> </div>
-        <div id="R3C4" class="cardDiv"> </div>
       </div>
-
     </div>
-
-    <div id="otherGameContent">
-      <h2 id="turnDisplay">Player 1's turn</h2>
-      <div id="pointTracker">
-        <h5>Player 1 points: 0</h5>
-        <h5>Player 2 points: 0</h5>
-      </div>
-
-      <div id="winTracker">
-        <h5>Player 1 wins: 0</h5>
-        <h5>Player 2 wins: 0</h5>
-      </div>
-
-    </div>
-
     <script src="index.js"></script>
-    
+
   </body>
 </html>

@@ -4,22 +4,34 @@
 
 
 #otherGameContent {
+  display: flex;
   flex-direction: row;
-  width: 90vw;
+  align-items: center;
+  width: 55vw;
   height: 10vh;
   
+  border: 0.5vh solid #FFC567;
+  border-left-color: #FFA866;
+  border-top-color: #FFA866;
+}
 
-  border: 2px solid blueviolet;
+#content {
+  display: flex;
+  flex-direction: row;
+  border: 0.5vh solid #FFC567;
+  border-bottom-color: #FFA866;
+  border-right-color: #FFA866;
 }
 
 #allCards {
   flex-direction: column;
   justify-content: space-evenly;
 
-  width: 90vw;
+  width: 95vw;
   height: 90vh;
   border: 0.5vh solid #FFC567;
   border-top-color: #FFA866;
+  border-left-color: #FFA866;
 }
 
 #pointTracker {

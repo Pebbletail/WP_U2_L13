@@ -49,6 +49,16 @@ p, a {
     font-family: "Public Sans", website-font;
 }
 
+h2 {
+    font-size: 3.5vh;
+    font-family: "Public Sans", website-font;
+}
+
+h5 {
+    font-size: 1.5vh;
+    font-family: "Public Sans", website-font;
+}
+
 body {
     background-color: #FFA866;
 }
